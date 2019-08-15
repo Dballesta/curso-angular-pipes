@@ -86,25 +86,53 @@
 
     <tr>
       <th>{{ dinero }}</th>
-      <td>currency añadiendo "EUR":true:"5.0-0" </td>
+      <td>currency añadiendo "EUR":true:"5.0-0"</td>
       <td>{{ dinero | currency: "EUR":true:"5.0-0" }}</td>
     </tr>
 
     <tr>
       <th>{{ dinero }}</th>
-      <td> number:".2-2" limitar decimales de un número</td>
-      <td>{{ dinero | number:".2-2" }}</td>
+      <td>number:".2-2" limitar decimales de un número</td>
+      <td>{{ dinero | number: ".2-2" }}</td>
     </tr>
 
     <tr>
-        <th>{{ valorDePromesa }}</th>
-        <td> async</td>
-        <td>{{ valorDePromesa | async }}</td>
-      </tr>
+      <th>{{ valorDePromesa }}</th>
+      <td>async</td>
+      <td>{{ valorDePromesa | async }}</td>
+    </tr>
 
+    <tr>
+      <th>{{ fecha }}</th>
+      <td>Date</td>
+      <td>{{ fecha | date }}</td>
+    </tr>
+
+    <tr>
+      <th>{{ fecha }}</th>
+      <td>Date date: "shortDate"</td>
+      <td>{{ fecha | date: "shortDate" }}</td>
+    </tr>
+
+    <tr>
+      <th>{{ fecha }}</th>
+      <td>Date date: "yyMMdd"</td>
+      <td>{{ fecha | date: "yyMMdd" }}</td>
+    </tr>
+
+    <tr>
+      <th>{{ nombre2 }}</th>
+      <td>Pipe Custom</td>
+      <td>{{ nombre2 | capitalizado }}</td>
+    </tr>
+
+    <tr>
+      <th>{{ nombre2 }}</th>
+      <td>Pipe Custom</td>
+      <td>{{ nombre2 | capitalizado: false }}</td>
+    </tr>
   </tbody>
 </table>
-
 
 <div class="container">
   <h4>Juego con Slice aplicado a un array y *ngFor</h4>
@@ -120,10 +148,11 @@
 </div>
 
 <div class="container">
-    <h4>Pipe JSON</h4>
-    <p>Es muy util para hacer pruebas, sobre todo para los servicios</p>
-    <pre>
+  <h4>Pipe JSON</h4>
+  <p>Es muy util para hacer pruebas, sobre todo para los servicios</p>
+  <pre>
       {{ heroe | json }}
-    </pre>>
-
-  </div>
+    </pre
+  >
+  >
+</div>
