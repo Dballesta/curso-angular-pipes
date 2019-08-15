@@ -25,4 +25,10 @@ export class AppComponent {
       numero: '12'
     }
   };
+
+  valorDePromesa = new Promise(( resolve, reject) => {
+
+    setTimeout( ()=>resolve('Llegó la data!'), 5000 );
+ })
+
 }
