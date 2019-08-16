@@ -7,10 +7,7 @@ export class CapitalizadoPipe implements PipeTransform {
     const nombres = value.split(' ');
     if (todas) {
       for (const i in nombres) {
-        //if agregado para quitar el warning de for(... in...)
-        if (this.nombres.hasOwnProperty(i)) {
         nombres[i] = nombres[i][0].toUpperCase() + nombres[i].substr(1);
-        }
       }
     } else {
         nombres[0] = nombres[0][0].toUpperCase() + nombres[0].substr(1);

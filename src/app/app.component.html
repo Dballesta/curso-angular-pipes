@@ -131,6 +131,7 @@
       <td>Pipe Custom</td>
       <td>{{ nombre2 | capitalizado: false }}</td>
     </tr>
+
   </tbody>
 </table>
 
@@ -152,7 +153,22 @@
   <p>Es muy util para hacer pruebas, sobre todo para los servicios</p>
   <pre>
       {{ heroe | json }}
-    </pre
-  >
-  >
+  </pre>
+</div>
+<hr>
+<div class="container">
+  <h3>Custom Pipe para coger recursos externos</h3>
+  <h4>YouTube</h4>
+  <p>Uso en el caso de que el source fuera de un servicio externo
+
+    https://www.youtube.com/embed/{{video}}
+  </p>
+  <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<hr>
+<div class="container">
+  <h3>Tarea: Custom pipe Esconder Pass</h3>
+  <p>{{nombre | ocultar: activated}}</p>
+  <button (click)='activated = !activated' type="button" class="btn btn-primary">Mostrar contraseña</button>
 </div>

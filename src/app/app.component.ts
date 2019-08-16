@@ -34,4 +34,8 @@ export class AppComponent {
 
   fecha = new Date();
 
+  video = 'JsLTNuC3FSc';
+
+  activated: boolean = true;
+
 }
